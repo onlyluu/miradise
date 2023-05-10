@@ -1,0 +1,102 @@
+[
+    {
+        "nombre": "Brilla como una Bratz con nuestro espejo de colores.",
+        "foto": "basicoRojo.jpeg",
+        "precio": "149,99",
+        "iva": 21,
+        "descuento": 20,
+        "categoria": "palas",
+        "unidades": 3,
+        "descripcion": "¡No hay nada mejor que reflejar tu estilo único con el espejo Bratz de Miradise! Con su borde Led y los colores más brillantes que puedas imaginar - azul, naranja y rosa - este espejo es una verdadera obra de arte. Ya sea que lo uses para tus sesiones de maquillaje, para selfies increíbles o simplemente para darte un vistazo a ti mismo, el espejo Bratz será tu nuevo mejor amigo. ¡Así que saca tus mejores looks y deja que el espejo Bratz te ayude a brillar como nunca antes!.",
+        "regalo": ""
+    },
+    {
+        "nombre": "Flores en tu reflejo: espejos únicos con bordes de arcilla",
+        "foto": "miniFlorecillas.jpg",
+        "precio": "165,99",
+        "iva": 21,
+        "descuento": 10,
+        "categoria": "palas",
+        "unidades": 1,
+        "descripcion": " ¿Aburrido de los mismos espejos sin personalidad? ¡Tenemos la solución perfecta para ti! Nuestros espejos con bordes de flores hechas de arcilla harán que tu reflejo sea aún más especial. Cada uno de nuestros espejos es único, con una combinación única de colores y diseños que hacen que cada uno sea un verdadero tesoro. Además, su borde de arcilla es resistente y duradero, asegurando que tu espejo sea un complemento duradero en tu hogar. Elige entre diferentes formas y tamaños, y descubre la magia de tener flores en tu reflejo.",
+        "regalo": ""
+    },
+    {
+        "nombre": "Espejo Flor-Espejismo",
+        "foto": "GrandeFlores.jpeg",
+        "precio": "135,99",
+        "iva": 21,
+        "descuento": "",
+        "categoria": "palas",
+        "unidades": 2,
+        "descripcion": "¿Quieres tener un espejo que refleje tu estilo y personalidad única? Nuestro espejo Flor-Espejismo es la respuesta. Con su diseño elegante de bordes de flores de arcilla de colores vivos, este espejo de cuerpo entero es perfecto para añadir un toque de originalidad a cualquier habitación. Lo mejor de todo es que puedes personalizar el detalle del borde derecho del espejo con lo que más te guste: ¿un arcoiris? ¿tu nombre? ¿una nube? ¡Las posibilidades son infinitas!",
+        "regalo": ""
+    },
+    {
+        "nombre": "Brilla como una Bratz con nuestro espejo de colores  ",
+        "foto": "basicoAzul.jpeg",
+        "precio": "149,99",
+        "iva": 21,
+        "descuento": 20,
+        "categoria": "palas",
+        "unidades": 4,
+        "descripcion": "¡No hay nada mejor que reflejar tu estilo único con el espejo Bratz de Miradise! Con su borde Led y los colores más brillantes que puedas imaginar - azul, naranja y rosa - este espejo es una verdadera obra de arte. Ya sea que lo uses para tus sesiones de maquillaje, para selfies increíbles o simplemente para darte un vistazo a ti mismo, el espejo Bratz será tu nuevo mejor amigo. ¡Así que saca tus mejores looks y deja que el espejo Bratz te ayude a brillar como nunca antes!.",
+        "regalo": ""
+    },
+
+    {
+        "nombre": "Espejo Arcilla: Sencillez, Modernidad y Color para tus Selfies",
+        "foto": "MiniNickelodeon.jpeg",
+        "precio": "235,99",
+        "iva": 21,
+        "descuento": 5,
+        "categoria": "palas",
+        "unidades": 4,
+        "descripcion": "Este espejo tamaño mediano y cuadrado es perfecto para tus selfies más modernos y atractivos. Los bordes curvos echos con arcilla en diferentes colores te darán ese toque de sencillez y color que estás buscando. Además, su diseño estilo bratz lo hace aún más único y original. ¡No te quedes sin el tuyo y dale un toque de estilo a tus selfies!",
+        "regalo": ""
+    },
+    {
+        "nombre": "Brilla como una Bratz con nuestro espejo de colores ",
+        "foto": "basicoAmarillo.jpeg",
+        "precio": "149,99",
+        "iva": 21,
+        "descuento": 20,
+        "categoria": "palas",
+        "unidades": 6,
+        "descripcion": "¡No hay nada mejor que reflejar tu estilo único con el espejo Bratz de Miradise! Con su borde Led y los colores más brillantes que puedas imaginar - azul, naranja y rosa - este espejo es una verdadera obra de arte. Ya sea que lo uses para tus sesiones de maquillaje, para selfies increíbles o simplemente para darte un vistazo a ti mismo, el espejo Bratz será tu nuevo mejor amigo. ¡Así que saca tus mejores looks y deja que el espejo Bratz te ayude a brillar como nunca antes!.",
+        "regalo": ""
+    },
+    {
+        "nombre": "Diva DeLight",
+        "foto": "bratz.jpeg",
+        "precio": "189,99",
+        "iva": 21,
+        "descuento": 15,
+        "categoria": "palas",
+        "unidades": 2,
+        "descripcion": "¡Mírate bien con nuestro espejo 'Diva Delight'! Este espejo de cuerpo entero es perfecto para destacar tus mejores looks con su diseño rosa brillante y bordes dobles. Además, cuenta con luces LED en su interior para que te sientas como una verdadera estrella al tomarte selfies o grabar videos. No te conformes con cualquier espejo aburrido, ¡sé una diva y consigue el tuyo hoy mismo! ¡Dale un toque único a tu habitación con el espejo 'Diva Delight' y haz que tus amigos mueran de envidia!",
+        "regalo": ""
+    },
+    {
+        "nombre": "Babolat CounterViper",
+        "foto": "donuts.jpeg",
+        "precio": "99,99",
+        "iva": 21,
+        "descuento": 45,
+        "categoria": "palas",
+        "unidades":1,
+        "descripcion": "¡El espejo que necesitas para tus selfies! Donuts mirror, con un borde en forma de donuts rosa de los Simpson, este espejo redondo es perfecto para añadir un toque divertido a cualquier habitación. ¡Refleja tu personalidad única con este espejo de Miradise!",
+        "regalo": ""
+    },
+    {
+        "nombre": "Brilla como una Bratz con nuestro espejo de colores .",
+        "foto": "espejoRosa.jpeg",
+        "precio": "149,99",
+        "iva": 21,
+        "descuento": 20,
+        "categoria": "palas",
+        "unidades": 6,
+        "descripcion": "¡No hay nada mejor que reflejar tu estilo único con el espejo Bratz de Miradise! Con su borde Led y los colores más brillantes que puedas imaginar - azul, naranja y rosa - este espejo es una verdadera obra de arte. Ya sea que lo uses para tus sesiones de maquillaje, para selfies increíbles o simplemente para darte un vistazo a ti mismo, el espejo Bratz será tu nuevo mejor amigo. ¡Así que saca tus mejores looks y deja que el espejo Bratz te ayude a brillar como nunca antes!.",
+        "regalo": ""
+    }
+]

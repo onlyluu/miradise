@@ -1,0 +1,251 @@
+@import url(reset.css);
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500;1,800&family=Tilt+Warp&display=swap');
+
+body {
+    min-width: 375px;
+    font-family: 'Raleway',
+        sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: 15px;
+    background-color: #F1F1F1;
+}
+
+a {
+    display: block;
+    height: 100%;
+    text-decoration: underline;
+}
+
+.encabezado {
+    position: relative;
+    font-weight: 700;
+
+    font-size: 1.5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1100px;
+    margin-top: 20px;
+    width: 55%;
+
+}
+
+.encabezado i {
+    font-size: 2em;
+    padding-left: 5px;
+    color: rgb(255, 34, 0);
+}
+
+#logo {
+    filter: grayscale(0.3);
+    opacity: 0.8;
+    /* transform: rotate(35deg); */
+    top: 0;
+
+    position: absolute;
+    right: 10px;
+    width: 120px;
+}
+
+.facu {
+    box-shadow: 0px 1px 5px 1px rgba(0, 0, 0, 0.68);
+    max-width: 1100px;
+    width: 55%;
+    margin-bottom: 30px;
+}
+
+.factura {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    min-height: 1100px;
+    background-color: white;
+    max-height: 2339px;
+    padding-bottom: 120px;
+
+}
+
+h1 {
+    font-size: 1.6em;
+    margin-bottom: 10px;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: violet;
+}
+
+h2 {
+    font-weight: 800;
+    color: white;
+    background-color: violet;
+    padding-top: 2px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+}
+
+#datos {
+    font-family: Arial, Helvetica, sans-serif;
+    margin-left: 3%;
+    width: 60%;
+    background-color: rgb(250, 249, 250);
+    line-height: 1.2em;
+    display: flex;
+    flex-direction: column;
+    text-align: justify;
+}
+
+#datos span,
+h2 {
+
+    padding: 2px;
+    
+}
+
+strong {
+
+    display: inline-block;
+    width: 100px;
+    font-weight: bold;
+}
+
+.datoscompañia {
+    line-height: 1.5em;
+    padding-top: 50px;
+    padding-left: 5%;
+    position: relative;
+}
+
+table {
+    margin: 30px auto;
+    width: 95%;
+    text-align: center;
+}
+
+thead td {
+    font-family: 'Tilt Warp',
+        cursive;
+    color: white;
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+    background-color: violet;
+}
+
+td {
+    padding: 10px;
+}
+
+#total {
+
+    padding: 10px;
+    gap: 5px;
+    margin: 0 auto;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+}
+
+#total>div {
+    gap: 10px;
+    text-align: right;
+    display: flex;
+
+}
+
+tr:nth-child(even) {
+    background-color: rgb(234, 194, 234);
+}
+
+#total>div>span {
+    width: 100px;
+}
+
+#cuenta {
+    border-bottom: 1px black solid;
+}
+
+#cuenta~div {
+    font-size: 1.3em;
+    color: violet;
+    font-family: 'Tilt Warp',
+        cursive;
+
+}
+
+span {
+
+
+    padding-bottom: 3px;
+}
+
+.prod {
+    text-align: justify;
+}
+
+.dere {
+    text-align: right;
+}
+
+#firma {
+    transform: rotate(-10deg);
+    padding-top: 50px;
+    margin-left: 10%;
+    width: 180px;
+}
+
+
+.encabezado span {
+    cursor: pointer;
+}
+
+@media (max-width: 850px) {
+    h2 {
+        height: 20px;
+    }
+
+    #datos {
+        font-size: 0.8em;
+    }
+
+    #firma {
+        width: 100px;
+    }
+
+    body {
+        font-size: 11px;
+    }
+
+    table {
+        margin: 10px auto;
+    }
+
+    #logo {
+        filter: grayscale(0.3);
+        opacity: 0.8;
+        top: 80px;
+        width: 70px;
+    }
+
+    .facu {
+        padding-bottom: 60px;
+        min-height: auto;
+    }
+
+    .encabezado,
+    .facu {
+
+        width: 90%;
+
+    }
+}

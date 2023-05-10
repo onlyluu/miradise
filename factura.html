@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <link rel="stylesheet" href="css/factura.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="Images/logoSinFondo.png" />
+    <script src="https://kit.fontawesome.com/f740c0a1da.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"
+        integrity="sha512-GsLlZN/3F2ErC5ifS5QtgpiJtWd43JWSuIgh7mbzZ8zBps+dvLusV+eNQATqgA/HdeKFVgA5v3S/cIrLF7QnIg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <title>Miradise</title>
+</head>
+
+<body>
+
+    <div class="encabezado">
+        <a href="tienda.html">Volver</a>
+        <span onclick="creafactura()">DESCARGAR<i class="fa-regular fa-file-pdf"></i>
+        </span>
+    </div>
+    <div class="facu">
+        <div class="factura">
+            <div class="datoscompañia">
+                <h1>Miradise</h1>
+                <p>Marketing y Publicidad</p>
+                <p>33202 GIJON</p>
+                <p id="nofac"></p>
+                <img id="logo" src="Images/logoSinFondo.png" alt="">
+            </div>
+
+            <div id="datos"></div>
+            <table>
+                <thead>
+                    <td>Cant.</td>
+                    <td>Poducto</td>
+                    <td>IVA</td>
+                    <td>Precio</td>
+                </thead>
+                <tbody id="productos">
+
+                </tbody>
+            </table>
+
+            <div id="total">SubTotal</div>
+
+            <img id="firma" src="Images/firma.png" alt="firma">
+
+        </div>
+    </div>
+
+</body>
+
+
+<script>
+
+    //Cremos el numero de factura aleatoriamente entre 1000 y 8000
+    let noFactura = Math.round(Math.random() * (8000 - 1000) + 1000)
+    document.querySelector("#nofac").textContent = `Nº de factura: 00${noFactura}`;
+
+    //Fecha actual, la pasamos a localestring y dividimos por la coma y nos quedamos con el indice 0 del array
+    const fechafactura = new Date(Date.now()).toLocaleString().split(",")[0];
+
+    //Objeto Persona con datos personales
+    const persona = {
+        nombre: "Stal",
+        apellido: "Revés",
+        direccion: "Avda de la Constitucion 51, Gijon",
+        telefono: "659994714",
+        email: "stalreves@derecho.net",
+        fecha: fechafactura
+    }
+
+    //Rellenamos los datos
+    document.querySelector("#datos").innerHTML = `
+    <h2>DATOS CLIENTE</h2>
+    <span><Strong>Nombre:</Strong> ${persona.nombre}  ${persona.apellido}</span>
+    <span><Strong>Dirección:</Strong> ${persona.direccion}</span>
+    <span><Strong>Teléfono:</Strong> +34 ${persona.telefono}</span>
+    <span><Strong>Email:</Strong> ${persona.email}</span>
+    <span><Strong>Fecha:</Strong> ${persona.fecha}</span>
+    `;
+
+    //Nuevo mapa para poder tratar los valores, al tener que mandarlo en texto , tuve que pasar el mapa a array y el array a texto, volver a contruir el array y pasarlo a mapa;
+
+    const compra = new Map();
+    const prod = JSON.parse(sessionStorage.getItem("productos"));
+    for (const p of prod) {
+        compra.set(p[0], p[1]);
+    }
+
+    tabladatos = document.getElementById("productos");
+    let total = 0;
+    let totaliva = 0;
+    let descuento = "";
+
+    //Rellenamos datos de la tabla desglosando los productos
+    for (const [k, v] of compra) {
+        if (k != "cupon") {
+            tabladatos.innerHTML += `<tr>
+                <td>${v}</td>
+                <td class="prod">${k.nombre}</td>
+                <td >${k.iva} %</td>
+                <td class="dere">${k.precio} €</td>
+                </tr>`;
+
+            let precio = parseFloat((k.precio).replace(",", ".")) * v;
+            totaliva = totaliva + parseFloat((precio * (k.iva / 100)));
+            total = total + precio;
+        }
+
+    }
+
+    //Si el valor del cupon del mapa pasado del carrito es 0.92 entonces calculamos el valor del cupon en uros y lo restamos del total
+    compra.get("cupon") == "0.92" ? descuento = ((total + totaliva) * 0.08).toFixed(2) : descuento = 0;
+    let totalconiva = (totaliva + total - descuento).toFixed(2).replace(".", ",");
+    total = total.toFixed(2).replace(".", ",");
+    totaliva = totaliva.toFixed(2).replace(".", ",");
+
+    //Rellenamos datos del precio total
+    document.getElementById("total").innerHTML = ` 
+    <div><span>Subtotal</span> <span>${total} €</span></div>
+    <div ><span>IVA</span> <span >${totaliva} €</span></div>
+    <div id="cuenta"><span>Descuentos</span> <span> -${descuento} €</span></div>
+    <div><span>TOTAL</span> <span>${totalconiva} €</span></div> 
+        `;
+
+    //Funcion con la api html2pdf para crear la factura
+    function creafactura() {
+
+        let factura = document.querySelector(".factura");
+        html2pdf()
+            .set({
+                margin: 0.5,
+                filename: `FacPOut00${noFactura}.pdf`,
+                image: {
+                    type: "jpeg",
+                    quality: 0.9
+                },
+                html2canvas: {
+                    scale: 3,
+                    letterRendering: true,
+                },
+                jsPDF: {
+                    unit: "in",
+                    format: "a3",
+                    orientation: "portrait",
+                }
+            })
+
+            .from(factura)
+            .save();
+
+    }
+
+</script>
+
+</html>

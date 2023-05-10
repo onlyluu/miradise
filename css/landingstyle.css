@@ -1,0 +1,224 @@
+@import url(reset.css);
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@1,500;1,800&family=Tilt+Warp&display=swap');
+
+body {
+    overflow: hidden;
+    color: white;
+    font-weight: 800;
+}
+
+
+#fondo {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+#fondo img {
+    object-fit: cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    z-index: 1;
+    transition: opacity 1.5s;
+    /* filter: grayscale(0.8) */
+}
+
+/* A parte de los video encima tiene un background semitransparente para darle mas oscuridad*/
+#tapa {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 100vw;
+    height: 100vh;
+    /* background-image: url(../Images/fondo/fondolanding.jpg); */
+    opacity: 0.95;
+}
+
+.logo {
+    grid-column: 0/ 3;
+    grid-row: 1;
+    justify-self: center;
+    /* align-self: end; */
+
+}
+
+.accede {
+    font-family: 'Raleway',
+        sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+    text-align: center;
+    width: 500px;
+    grid-column: 3/ 4;
+    grid-row: 2;
+    justify-self: center;
+    align-self: center;
+
+}
+
+h1 {
+    font-size: 3em;
+}
+
+.logo img {
+    /* transform: rotate(20deg); */
+    width: 300px;
+}
+
+
+.container {
+    align-self: center;
+    justify-self: center;
+    width: 200px;
+    position: relative;
+    height: 200px;
+    grid-row: 3;
+    grid-column: 3/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+
+}
+
+.ball {
+    transform: rotate(20deg);
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    /* background: #c9f364; */
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+
+}
+
+a:hover~.ball {
+    animation: ball 1.5s linear infinite;
+}
+
+
+
+.container a {
+    font-weight: 800;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    border-radius: 50%;
+    color: white;
+    font-family: 'Raleway',
+        sans-serif;
+    font-size: 1.5em;
+    position: absolute;
+    top: 0;
+    right: 0;
+    z-index: 3;
+}
+
+span {
+    color: white
+}
+
+.ball:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #f040b0;
+    /* border-radius: 50%; */
+    box-sizing: border-box;
+    background: transparent;
+    /* left: -65%; */
+    filter: blur(1px);
+}
+
+.ball:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border: 5px solid #f040b0;
+    /* border-radius: 50%; */
+    box-sizing: border-box;
+    background: transparent;
+    /* right: -65%; */
+    filter: blur(1px);
+}
+
+/* Animaciones */
+@keyframes ball {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    50% {
+        transform: rotate(180deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/*A menos cambia a 1 columna */
+@media (max-width:985px) {
+    body {
+        font-size: 10px;
+    }
+
+    #tapa {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+
+    }
+
+    .container,
+    .logo,
+    .accede {
+        grid-column: 1;
+    }
+
+    .logo {
+
+        padding-left: 10%;
+    }
+
+    .logo img {
+        width: 250px;
+        transform: none;
+
+    }
+
+    .accede {
+        width: 100%;
+        font-size: 2em;
+    }
+
+    .ball,
+    .container {
+        width: 200px;
+        height: 200px;
+        font-size: 2em;
+    }
+
+    .ball {
+        animation: ball 2.5s linear infinite;
+    }
+
+}
