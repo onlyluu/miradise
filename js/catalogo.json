@@ -2,9 +2,9 @@
     {
         "nombre": "Brilla como una Bratz con nuestro espejo de colores.",
         "foto": "basicoRojo.jpeg",
-        "precio": "149,99",
+        "precio": "90",
         "iva": 21,
-        "descuento": 20,
+        "descuento": 10,
         "categoria": "palas",
         "unidades": 3,
         "descripcion": "¡No hay nada mejor que reflejar tu estilo único con el espejo Bratz de Miradise! Con su borde Led y los colores más brillantes que puedas imaginar - azul, naranja y rosa - este espejo es una verdadera obra de arte. Ya sea que lo uses para tus sesiones de maquillaje, para selfies increíbles o simplemente para darte un vistazo a ti mismo, el espejo Bratz será tu nuevo mejor amigo. ¡Así que saca tus mejores looks y deja que el espejo Bratz te ayude a brillar como nunca antes!.",
@@ -13,7 +13,7 @@
     {
         "nombre": "Flores en tu reflejo: espejos únicos con bordes de arcilla",
         "foto": "miniFlorecillas.jpg",
-        "precio": "165,99",
+        "precio": "45",
         "iva": 21,
         "descuento": 10,
         "categoria": "palas",
@@ -35,7 +35,7 @@
     {
         "nombre": "Brilla como una Bratz con nuestro espejo de colores  ",
         "foto": "basicoAzul.jpeg",
-        "precio": "149,99",
+        "precio": "90",
         "iva": 21,
         "descuento": 20,
         "categoria": "palas",
@@ -47,7 +47,7 @@
     {
         "nombre": "Espejo Arcilla: Sencillez, Modernidad y Color para tus Selfies",
         "foto": "miniNickelodeon.jpeg",
-        "precio": "235,99",
+        "precio": "40",
         "iva": 21,
         "descuento": 5,
         "categoria": "palas",
@@ -58,7 +58,7 @@
     {
         "nombre": "Brilla como una Bratz con nuestro espejo de colores ",
         "foto": "basicoAmarillo.jpeg",
-        "precio": "149,99",
+        "precio": "90",
         "iva": 21,
         "descuento": 20,
         "categoria": "palas",
@@ -91,7 +91,7 @@
     {
         "nombre": "Brilla como una Bratz con nuestro espejo de colores .",
         "foto": "espejoRosa.jpeg",
-        "precio": "149,99",
+        "precio": "90",
         "iva": 21,
         "descuento": 20,
         "categoria": "palas",
