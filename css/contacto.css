@@ -2,7 +2,7 @@
 @import url(https://fonts.googleapis.com/css?family=Noto+Sans);
 /*Estilos grid*/
 .cuerpo{
-    margin: 40px auto;
+    margin: 60px auto;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
